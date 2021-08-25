@@ -1,0 +1,13 @@
+.block-request {
+  background-color: #7109AA7D;
+}
+
+.block-response {
+  background-color: #75EE3B7D;
+}
+
+.code-json {
+  background-color: #2B2B2BE3;
+  color: #CB6B2E;
+  font-size: 20px;
+}

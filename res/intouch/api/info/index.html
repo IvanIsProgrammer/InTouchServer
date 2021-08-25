@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link href="css/styles.css" type="text/css" rel="stylesheet">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"></script>
+
+
+    <title></title>
+  </head>
+  <body>
+    <div class="accordion" id="accordionExample">
+
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="heading_NewUserRegistration">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_NewUserRegistration" aria-expanded="true" aria-controls="collapseOne">
+            New User Registration
+          </button>
+        </h2>
+        <div id="collapse_NewUserRegistration" class="accordion-collapse collapse show" aria-labelledby="heading_NewUserRegistration" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <p><strong><h3>URL path: api/registration</h3></strong></p>
+
+            <div class="container-fluid mx-0">
+              <div class="row gx-5">
+                <div class="col">
+                 <div class="p-3 border block-request">
+                   <h5>Request</h5>
+                   <pre class="code-json p-2">
+{
+  "login" : string,
+  "password" : string
+}</pre>
+                   <div>Login - username (maximum 20 characters)</div>
+                   <div>Password - password (maximum 20 characters)</div>
+                 </div>
+                </div>
+                <div class="col">
+                  <div class="p-3 border block-response">
+                    <h5>Response</h5>
+                    <pre class="code-json p-2">
+{
+  "status" : string
+}</pre>
+                    <div>Status - successfull/failed</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="heading_UserAuthorization">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_UserAuthorization" aria-expanded="false" aria-controls="collapseTwo">
+            User authorization
+          </button>
+        </h2>
+        <div id="collapse_UserAuthorization" class="accordion-collapse collapse" aria-labelledby="heading_UserAuthorization" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <p><strong><h3>URL path: api/authorization</h3></strong></p>
+
+            <div class="container-fluid mx-0">
+              <div class="row gx-5">
+                <div class="col">
+                 <div class="p-3 border block-request">
+                   <h5>Request</h5>
+                   <pre class="code-json p-2">
+{
+  "login" : "string",
+  "password" : "string"
+}</pre>
+                   <div>Login - username (maximum 20 characters)</div>
+                   <div>Password - password (maximum 20 characters)</div>
+                 </div>
+                </div>
+                <div class="col">
+                  <div class="p-3 border block-response">
+                    <h5>Response</h5>
+                    <pre class="code-json p-2">
+{
+  "status" : "string",
+  "token" : "string"
+}</pre>
+                    <div>Status - successfull/failed</div>
+                    <div>Token - user identification key (40 characters)</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="heading_SendingMessage">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_SendingMessage" aria-expanded="false" aria-controls="collapse_SendingMessage">
+            Sending message
+          </button>
+        </h2>
+        <div id="collapse_SendingMessage" class="accordion-collapse collapse" aria-labelledby="heading_SendingMessage" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <p><strong><h3>URL path: api/send_message</h3></strong></p>
+
+            <div class="container-fluid mx-0">
+              <div class="row gx-5">
+                <div class="col">
+                 <div class="p-3 border block-request">
+                   <h5>Request</h5>
+                   <pre class="code-json p-2">
+{
+  "token" : "string",
+  "content" : "string"
+}</pre>
+                   <div>Token - user identification key (40 characters)</div>
+                   <div>Content - text message</div>
+                 </div>
+                </div>
+                <div class="col">
+                  <div class="p-3 border block-response">
+                    <h5>Response</h5>
+                    <pre class="code-json p-2">
+{
+  "status" : "string"
+}</pre>
+                    <div>Status - successfull/failed</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="heading_GettingMessage">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_GettingMessage" aria-expanded="false" aria-controls="collapse_GettingMessage">
+            Getting message
+          </button>
+        </h2>
+        <div id="collapse_GettingMessage" class="accordion-collapse collapse" aria-labelledby="heading_GettingMessage" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <p><strong><h3>URL path: api/get_message</h3></strong></p>
+
+            <div class="container-fluid mx-0">
+              <div class="row gx-5">
+                <div class="col">
+                 <div class="p-3 border block-request">
+                   <h5>Request</h5>
+                   <pre class="code-json p-2">
+      {
+      "token" : "string",
+      "current_id": "numb"
+      }</pre>
+                   <div>Token - user identification key (40 characters)</div>
+                   <div>Current_id - current message id</div>
+                 </div>
+                </div>
+                <div class="col">
+                  <div class="p-3 border block-response">
+                    <h5>Response</h5>
+                    <pre class="code-json p-2">
+      {
+      "sender": "string",
+      "id": "numb",
+      "content": "string",
+      "status": "string"
+      }</pre>
+                    <div>Sender - username who sent the message</div>
+                    <div>Id - message id</div>
+                    <div>Content - text message</div>
+                    <div>Status - successfull/failed</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="heading_GettingLastMessage">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_GettingLastMessage" aria-expanded="false" aria-controls="collapse_GettingLastMessage">
+            Getting last message
+          </button>
+        </h2>
+        <div id="collapse_GettingLastMessage" class="accordion-collapse collapse" aria-labelledby="heading_GettingLastMessage" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <p><strong><h3>URL path: api/get_last_message</h3></strong></p>
+
+            <div class="container-fluid mx-0">
+              <div class="row gx-5">
+                <div class="col">
+                 <div class="p-3 border block-request">
+                   <h5>Request</h5>
+                   <pre class="code-json p-2">
+{
+  "token" : "string"
+}</pre>
+                   <div>Token - user identification key (40 characters)</div>
+                 </div>
+                </div>
+                <div class="col">
+                  <div class="p-3 border block-response">
+                    <h5>Response</h5>
+                    <pre class="code-json p-2">
+{
+    "sender": "string",
+    "id": "numb",
+    "content": "string",
+    "status": "string"
+}</pre>
+                    <div>Sender - username who sent the message</div>
+                    <div>Id - message id</div>
+                    <div>Content - text message</div>
+                    <div>Status - successfull/failed</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="heading_GettingNextMessage">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_GettingNextMessage" aria-expanded="false" aria-controls="collapse_GettingNextMessage">
+            Getting next message
+          </button>
+        </h2>
+        <div id="collapse_GettingNextMessage" class="accordion-collapse collapse" aria-labelledby="heading_GettingNextMessage" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <p><strong><h3>URL path: api/get_next_message</h3></strong></p>
+
+            <div class="container-fluid mx-0">
+              <div class="row gx-5">
+                <div class="col">
+                 <div class="p-3 border block-request">
+                   <h5>Request</h5>
+                   <pre class="code-json p-2">
+{
+  "token" : "string",
+  "current_id": "numb"
+}</pre>
+                   <div>Token - user identification key (40 characters)</div>
+                   <div>Current_id - current message id</div>
+                 </div>
+                </div>
+                <div class="col">
+                  <div class="p-3 border block-response">
+                    <h5>Response</h5>
+                    <pre class="code-json p-2">
+{
+    "sender": "string",
+    "id": "numb",
+    "content": "string",
+    "status": "string"
+}</pre>
+                    <div>Sender - username who sent the message</div>
+                    <div>Id - message id</div>
+                    <div>Content - text message</div>
+                    <div>Status - successfull/failed</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="heading_GettingPreviousMessage">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_GettingPreviousMessage" aria-expanded="false" aria-controls="collapse_GettingPreviousMessage">
+            Getting previous message
+          </button>
+        </h2>
+        <div id="collapse_GettingPreviousMessage" class="accordion-collapse collapse" aria-labelledby="heading_GettingPreviousMessage" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <p><strong><h3>URL path: api/get_previous_message</h3></strong></p>
+
+            <div class="container-fluid mx-0">
+              <div class="row gx-5">
+                <div class="col">
+                 <div class="p-3 border block-request">
+                   <h5>Request</h5>
+                   <pre class="code-json p-2">
+{
+  "token" : "string",
+  "current_id": "numb"
+}</pre>
+                   <div>Token - user identification key (40 characters)</div>
+                   <div>Current_id - current message id</div>
+                 </div>
+                </div>
+                <div class="col">
+                  <div class="p-3 border block-response">
+                    <h5>Response</h5>
+                    <pre class="code-json p-2">
+{
+    "sender": "string",
+    "id": "numb",
+    "content": "string",
+    "status": "string"
+}</pre>
+                    <div>Sender - username who sent the message</div>
+                    <div>Id - message id</div>
+                    <div>Content - text message</div>
+                    <div>Status - successfull/failed</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </body>
+</html>

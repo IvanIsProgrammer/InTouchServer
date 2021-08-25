@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="IntouchServer:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/IntouchServer_jar</output-path>
+    <root id="archive" name="IntouchServer.jar">
+      <element id="module-output" name="IntouchServer" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/json-simple-1.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/mysql-connector-java-8.0.26.jar" path-in-jar="/" />
+      <element id="library" level="project" name="industrialcraft_2_2.5.63_ex19" />
+    </root>
+  </artifact>
+</component>
