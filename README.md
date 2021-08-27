@@ -23,4 +23,4 @@ InTouch Server - REST API Server, исполняющий роль чата.
   `Content` TEXT NOT NULL,
   PRIMARY KEY (`M_ID`),
   UNIQUE INDEX `idnew_table_UNIQUE` (`M_ID` ASC));
-5)Запустить сервер.
+5) Запустить сервер.
