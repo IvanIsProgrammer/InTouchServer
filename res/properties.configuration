@@ -4,5 +4,5 @@ server.path=/api/info
 server.filesystemPath=res/intouch
 
 db.url=jdbc:mysql://127.0.0.1:3306/intouch
-db.user=admin
-db.password=admin
+db.user=root
+db.password=2033

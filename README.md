@@ -17,7 +17,7 @@ InTouch Server - REST API Server, исполняющий роль чата.
   UNIQUE INDEX `new_tablecol_UNIQUE` (`Login` ASC),
   UNIQUE INDEX `new_tablecol2_UNIQUE` (`Token` ASC));
 4) создать таблицу Messages:
-  CREATE TABLE `test`.`Messages` (
+  CREATE TABLE `intouch`.`Messages` (
   `M_ID` INT(11) NOT NULL DEFAULT '0',
   `Sender` VARCHAR(20) NOT NULL,
   `Content` TEXT NOT NULL,

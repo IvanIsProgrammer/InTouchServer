@@ -18,8 +18,6 @@ public class DB {
     }
 
     DB() {
-
-
         try {
             Properties props = WebServer.props;
             Connection connection = DriverManager.getConnection(
