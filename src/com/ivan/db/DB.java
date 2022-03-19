@@ -24,6 +24,7 @@ public class DB {
                     props.getProperty("db.url"),
                     props.getProperty("db.user"),
                     props.getProperty("db.password")
+
             );
             statement = connection.createStatement();
         } catch (SQLException e) {
